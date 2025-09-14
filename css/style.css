@@ -1,0 +1,182 @@
+/* ====== БАЗОВЫЕ СТИЛИ ====== */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+h1, h2, h3 {
+  color: #222;
+  font-weight: 600;
+}
+
+/* ====== ССЫЛКИ ====== */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #005999;
+  text-decoration: underline;
+}
+
+/* ====== HEADER ====== */
+.site-header {
+  background: #1e2a38;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ====== НАВИГАЦИЯ ====== */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+.main-nav a:hover {
+  background: #0077cc;
+  color: #fff;
+}
+
+/* ====== БУРГЕР ====== */
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ====== КОНТЕНТ + САЙДБАР ====== */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* MAIN */
+main {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* SIDEBAR */
+aside {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+aside h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.4rem;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+aside input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+aside button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+aside button:hover {
+  background: #005999;
+}
+
+/* ====== FOOTER ====== */
+.site-footer {
+  background: #1e2a38;
+  color: #bbb;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.site-footer a {
+  color: #4da6ff;
+}
+
+/* ====== АДАПТИВНОСТЬ ====== */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    background: #1e2a38;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .main-nav.active ul {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
