@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plausible - Self-Hosted Analytics</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo">
+        <a href="index.html">Self-Hosted Analytics</a>
+      </div>
+      <nav class="main-nav">
+      </nav>
+    </div>
+  </header>
+
+  <div class="container content-grid">
+    
+    <aside>
+      <h3>Навигация</h3>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="matomo.html">Matomo</a></li>
+          <li><a href="plausible.html" class="active">Plausible</a></li>
+          <li><a href="umami.html">Umami</a></li>
+          <li><a href="fathom.html">Fathom</a></li>
+          <li><a href="ackee.html">Ackee</a></li>
+          <li><a href="shynet.html">Shynet</a></li>
+          <li><a href="swetrix.html">Swetrix</a></li>
+          <li><a href="pirsch.html">Pirsch</a></li>
+          <li><a href="cabin.html">Cabin</a></li>
+          <li><a href="comparison.html">Сравнение</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h1>👁️ Plausible Analytics</h1>
+      <p class="subtitle">Легковесная и приватная веб-аналитика</p>
+
+      <div class="tool-info">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>⭐ Рейтинг</h3>
+            <p>4.9/5 (GitHub)</p>
+          </div>
+          <div class="info-card">
+            <h3>🚀 Установка</h3>
+            <p>Простая</p>
+          </div>
+          <div class="info-card">
+            <h3>💾 Размер</h3>
+            <p>~1.4KB (скрипт)</p>
+          </div>
+          <div class="info-card">
+            <h3>🐘 Язык</h3>
+            <p>Elixir + PostgreSQL</p>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <h2>Особенности Plausible</h2>
+        <ul>
+          <li><strong>Всего 1.4KB</strong> против 45KB у Google Analytics</li>
+          <li><strong>Полная анонимность</strong> - без cookies</li>
+          <li><strong>GDPR compliant</strong> из коробки</li>
+          <li><strong>Быстрая загрузка</strong> - не замедляет сайт</li>
+          <li><strong>Простой интерфейс</strong> - только важные метрики</li>
+          <li><strong>Open Source</strong> - самодостаточная версия</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Установка через Docker</h2>
+        <pre><code># Клонируем репозиторий
+git clone https://github.com/plausible/hosting
+cd hosting
+
+# Запускаем
+docker-compose up -d</code></pre>
+
+        <p>Plausible будет доступен на порту 8000</p>
+      </section>
+
+      <section>
+        <h2>Код отслеживания</h2>
+        <pre><code>&lt;script defer data-domain="yourdomain.com" 
+        src="https://plausible.io/js/script.js"&gt;&lt;/script&gt;
+
+&lt;!-- Для self-hosted версии --&gt;
+&lt;script defer data-domain="yourdomain.com" 
+        src="https://your-domain.com/js/script.js"&gt;&lt;/script&gt;</code></pre>
+      </section>
+
+      <section>
+        <h2>Плюсы и минусы</h2>
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>✅ Преимущества</h3>
+            <ul>
+              <li>Невероятно легкий</li>
+              <li>Простая установка</li>
+              <li>Полная приватность</li>
+              <li>Современный стек</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>❌ Недостатки</h3>
+            <ul>
+              <li>Меньше фич чем у Matomo</li>
+              <li>Нет тепловых карт</li>
+              <li>Ограниченные отчеты</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ельцов Матвей Максимович, группа 335</p>
+    </div>
+  </footer>
+
+</body>
+</html>

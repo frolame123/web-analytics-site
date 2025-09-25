@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fathom - Self-Hosted Analytics</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo">
+        <a href="index.html">Self-Hosted Analytics</a>
+  </header>
+
+  <div class="container content-grid">
+    
+    <aside>
+      <h3>Навигация</h3>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="matomo.html">Matomo</a></li>
+          <li><a href="plausible.html">Plausible</a></li>
+          <li><a href="umami.html">Umami</a></li>
+          <li><a href="fathom.html" class="active">Fathom</a></li>
+          <li><a href="ackee.html">Ackee</a></li>
+          <li><a href="shynet.html">Shynet</a></li>
+          <li><a href="swetrix.html">Swetrix</a></li>
+          <li><a href="pirsch.html">Pirsch</a></li>
+          <li><a href="cabin.html">Cabin</a></li>
+          <li><a href="comparison.html">Сравнение</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h1>🔍 Fathom Analytics</h1>
+      <p class="subtitle">Простая аналитика для уважающих приватность</p>
+
+      <div class="tool-info">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>📊 Тип</h3>
+            <p>Коммерческий + Lite версия</p>
+          </div>
+          <div class="info-card">
+            <h3>🚀 Установка</h3>
+            <p>Простая</p>
+          </div>
+          <div class="info-card">
+            <h3>💾 Вес</h3>
+            <p>~2KB</p>
+          </div>
+          <div class="info-card">
+            <h3>⚙️ Язык</h3>
+            <p>Go</p>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <h2>О Fathom</h2>
+        <p>Fathom предлагает два варианта: облачная версия (платная) и Fathom Lite (бесплатная self-hosted версия).</p>
+        
+        <h3>Основные возможности:</h3>
+        <ul>
+          <li><strong>Без cookies</strong> - полная анонимность</li>
+          <li><strong>Простой интерфейс</strong> - только важные метрики</li>
+          <li><strong>GDPR compliant</strong> - не требует согласия</li>
+          <li><strong>Быстрая загрузка</strong> - не влияет на скорость сайта</li>
+          <li><strong>White-label</strong> - можно кастомизировать</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Установка Fathom Lite</h2>
+        <pre><code># Через Docker
+docker run -d --name fathom \\
+  -p 8080:8080 \\
+  -v /path/to/config:/etc/fathom \\
+  usefathom/fathom:latest</code></pre>
+
+        <h3>Или бинарным файлом:</h3>
+        <pre><code>wget https://github.com/usefathom/fathom/releases/latest/download/fathom-linux-amd64
+chmod +x fathom-linux-amd64
+./fathom-linux-amd64 server</code></pre>
+      </section>
+
+      <section>
+        <h2>Код отслеживания</h2>
+        <pre><code>&lt;script src="https://cdn.usefathom.com/script.js" 
+        site="YOUR_SITE_ID" 
+        defer&gt;&lt;/script&gt;
+
+&lt;!-- Для self-hosted --&gt;
+&lt;script src="https://your-domain.com/script.js" 
+        site="YOUR_SITE_ID" 
+        defer&gt;&lt;/script&gt;</code></pre>
+      </section>
+
+      <section>
+        <h2>Цены</h2>
+        <div class="pricing">
+          <div class="plan">
+            <h3>Fathom Lite (Self-Hosted)</h3>
+            <p class="price">Бесплатно</p>
+            <ul>
+              <li>Базовые метрики</li>
+              <li>Self-hosted</li>
+              <li>Open Source</li>
+            </ul>
+          </div>
+          <div class="plan">
+            <h3>Fathom Pro (Cloud)</h3>
+            <p class="price">$14/месяц</p>
+            <ul>
+              <li>Все возможности Lite</li>
+              <li>Расширенные отчеты</li>
+              <li>Поддержка</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ельцов Матвей Максимович, группа 335</p>
+    </div>
+  </footer>
+
+</body>
+</html>
