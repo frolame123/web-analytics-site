@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shynet - Self-Hosted Analytics</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo">
+        <a href="index.html">Self-Hosted Analytics</a>
+  </header>
+
+  <div class="container content-grid">
+    
+    <aside>
+      <h3>Навигация</h3>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="matomo.html">Matomo</a></li>
+          <li><a href="plausible.html">Plausible</a></li>
+          <li><a href="umami.html">Umami</a></li>
+          <li><a href="fathom.html">Fathom</a></li>
+          <li><a href="ackee.html">Ackee</a></li>
+          <li><a href="shynet.html" class="active">Shynet</a></li>
+          <li><a href="swetrix.html">Swetrix</a></li>
+          <li><a href="pirsch.html">Pirsch</a></li>
+          <li><a href="cabin.html">Cabin</a></li>
+          <li><a href="comparison.html">Сравнение</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h1>🕵️ Shynet Analytics</h1>
+      <p class="subtitle">Мощная аналитика без использования JavaScript</p>
+
+      <div class="tool-info">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>🔧 Тип</h3>
+            <p>Server-side аналитика</p>
+          </div>
+          <div class="info-card">
+            <h3>🚀 Установка</h3>
+            <p>Сложная</p>
+          </div>
+          <div class="info-card">
+            <h3>📊 Метод</h3>
+            <p>HTTP запросы</p>
+          </div>
+          <div class="info-card">
+            <h3>⚙️ Язык</h3>
+            <p>Python + Django</p>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <h2>Уникальные особенности</h2>
+        <p>Shynet работает на стороне сервера и не требует JavaScript на клиенте:</p>
+        
+        <ul>
+          <li><strong>Без JavaScript</strong> - работает даже если отключен JS</li>
+          <li><strong>Высокая точность</strong> - меньше блокировок adblock</li>
+          <li><strong>Подробная гео-информация</strong> - по IP адресам</li>
+          <li><strong>Отслеживание ботов</strong> - видит поисковых роботов</li>
+          <li><strong>Кастомные события</strong> - через HTTP запросы</li>
+          <li><strong>API первого класса</strong> - полная интеграция</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Установка</h2>
+        <p>Shynet требует больше настроек, но предлагает уникальные возможности:</p>
+        
+        <h3>Через Docker Compose:</h3>
+        <pre><code>git clone https://github.com/milesmcc/shynet.git
+cd shynet
+docker-compose up -d</code></pre>
+
+        <h3>Ручная установка:</h3>
+        <ol>
+          <li>Установите Python 3.8+ и PostgreSQL</li>
+          <li>Клонируйте репозиторий</li>
+          <li>Настройте переменные окружения</li>
+          <li>Запустите миграции базы данных</li>
+          <li>Настройте веб-сервер (nginx)</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Методы отслеживания</h2>
+        
+        <h3>Через JavaScript (опционально):</h3>
+        <pre><code>&lt;script src="https://your-domain.com/ingress/your-service-id/script.js"&gt;&lt;/script&gt;</code></pre>
+
+        <h3>Через изображение (no-JS):</h3>
+        <pre><code>&lt;img src="https://your-domain.com/ingress/your-service-id/pixel.gif" 
+     alt="" 
+     width="1" 
+     height="1" 
+     style="display: none;"&gt;</code></pre>
+
+        <h3>Через API:</h3>
+        <pre><code>fetch('https://your-domain.com/ingress/your-service-id', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({type: 'pageview'})
+})</code></pre>
+      </section>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ельцов Матвей Максимович, группа 335</p>
+    </div>
+  </footer>
+
+</body>
+</html>
